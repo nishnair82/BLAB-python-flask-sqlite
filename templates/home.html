@@ -1,7 +1,13 @@
 {% extends "layout.html" %}
 {% block title %}
-Student Flask App with CRUD
+Account List with CRUD
 {% endblock %}
 {% block content %}
-<h1>Welcome to my Student Flask App!</h1>
+<h1>BLAB Account Tracking</h1>
+<div>
+    <a href="{{ url_for('list') }}" class="navbar-item">
+        <button type="button"><span></span>List</button>
+    </a>
+    <button type="button"><span></span>Search</button>
+</div>
 {% endblock %}
