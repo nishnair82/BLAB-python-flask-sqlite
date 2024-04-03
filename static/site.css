@@ -27,6 +27,9 @@
     justify-content: space-between;
     font-family: sans-serif;
 }
+.form {
+    margin-bottom: 2em; /* adds 2 units of spacing after each div */
+}
 
 .logo{
     width: 200px;
@@ -97,7 +100,7 @@
 .content {
     width: 100%;
     position:absolute;
-    top: 50%;
+    top: 45%;
     transform: translateY(-50%);
     text-align: center;
     color: #fff;
@@ -110,10 +113,28 @@
 }
 
 .content p {
-    margin: 20px auto;
+    margin: 30px auto;
     font-weight: 100;
     line-height: 25px;
 }
+
+form {
+    margin-bottom: 2em; /* adds 2 units of spacing after each div */
+    /* box-sizing: content-box; */
+    padding: 2rem;
+    border-radius: 1rem;
+    /* background-color: hsl(0, 0%, 100%); */
+    /* border: 4px solid hsl(0, 11%, 96%); */
+    border-width: 1ex 1ex 1ex;
+    /* display: block; */
+    display: inline-block;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+/* .content table {
+    margin-right: 2em,auto;
+} */
 
 button {
     width: 110px;
@@ -198,3 +219,54 @@ input[type=text] {
     font-family: sans-serif;
 
 }
+
+
+table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    border: 2px solid rgb(200,200,200);
+    letter-spacing: 1px;
+    font-size: 1rem;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    /* background-color: #009879; */
+    color: #ffffff;
+  }
+  
+  thead th,
+  tfoot th {
+    font-family: "Rock Salt";
+    background: linear-gradient(to bottom, rgba(197, 195, 195, 0.1), rgba(10, 10, 10, 0.277));
+    border: 3px solid rgb(173, 171, 168);
+  }  
+
+  td, th {
+    border: 1px solid rgb(190,190,190);
+    padding: 10px 20px;
+  }
+  
+  th {
+    background-color: rgb(4, 4, 4);
+    letter-spacing: 2px;
+  }
+  
+  td {
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  
+  tr:nth-child(even) td {
+    background-color: rgba(250, 250, 250, 0.001);
+  }
+  
+  tr:nth-child(odd) td {
+    background-color: rgba(51, 7, 244, 0.393);
+  }
+  
+  caption {
+    padding: 5px;
+  }
+
+  tfoot th {
+    text-align: right;
+  }
