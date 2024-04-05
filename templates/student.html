@@ -30,18 +30,24 @@ Add New Student
         <form action="{{ url_for('addrec') }}" method="POST">
             <h2>Insert Account Details:</h3>
 
-            <label for="name">Name</label>
+            <label for="name">Account_Name</label>
             <input id="name" type="text" name="nm" /><br>
 
-            Address
+            CSM
             <!-- <textarea name="add"></textarea><br> -->
-            <input type="text" name="add" /><br>
+            <input type="text" name="csm" /><br>
 
-            City
-            <input type="text" name="city" /><br>
+            ES
+            <input type="text" name="es" /><br>
 
-            Zip Code
-            <input type="text" name="zip" /><br>
+            Last Contacted
+            <input type="text" name="last" /><br>
+
+            Activity Performed
+            <input type="text" name="activity" /><br>
+
+            Next Contact
+            <input type="text" name="next" /><br>
 
             <input type="submit" value="Submit" /><br>
         </form>

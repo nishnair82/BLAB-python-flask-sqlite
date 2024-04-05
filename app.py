@@ -26,15 +26,21 @@ def addrec():
     # Data will be available from POST submitted by the form
     if request.method == 'POST':
         try:
+            # nm = request.form['nm']
+            # addr = request.form['add']
+            # city = request.form['city']
+            # zip = request.form['zip']
             nm = request.form['nm']
-            addr = request.form['add']
-            city = request.form['city']
-            zip = request.form['zip']
+            csm = request.form['csm']
+            es = request.form['es']
+            last = request.form['last']
+            act = request.form['activity']
+            next = request.form['next']
 
             # Connect to SQLite3 database and execute the INSERT
-            with sqlite3.connect('database.db') as con:
+            with sqlite3.connect('accounts.db') as con:
                 cur = con.cursor()
-                cur.execute("INSERT INTO students (name, addr, city, zip) VALUES (?,?,?,?)",(nm, addr, city, zip))
+                cur.execute("INSERT INTO accounts (Account_name, CSM, ES, Last_Contacted, Activity_Performed, Next_Contact) VALUES (?,?,?,?,?,?)",(nm, csm, es, last, act, next))
 
                 con.commit()
                 msg = "Record successfully added to database"
@@ -52,11 +58,11 @@ def addrec():
 def list():
     # Connect to the SQLite3 datatabase and 
     # SELECT rowid and all Rows from the students table.
-    con = sqlite3.connect("database.db")
+    con = sqlite3.connect("accounts.db")
     con.row_factory = sqlite3.Row
 
     cur = con.cursor()
-    cur.execute("SELECT rowid, * FROM students")
+    cur.execute("SELECT rowid, * FROM accounts")
 
     rows = cur.fetchall()
     con.close()
