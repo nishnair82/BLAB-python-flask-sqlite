@@ -18,7 +18,7 @@ def home():
 # Route to form used to add a new student to the database
 @app.route("/enternew")
 def enternew():
-    return render_template("student.html")
+    return render_template("account.html")
 
 # Route to add a new record (INSERT) student data to the database
 @app.route("/addrec", methods = ['POST', 'GET'])

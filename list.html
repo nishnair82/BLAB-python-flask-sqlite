@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>Planning App</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="main">
@@ -13,8 +13,8 @@
             <div class="menu">
                 <ul>
                     <li><a href="#">HOME</a></li>
-                    <li><a href="#">ADD</a></li>
-                    <li><a href="{{ url_for('list') }}">SHOW</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SERVICE</a></li>
                     <li><a href="#">DESIGN</a></li>
                     <li><a href="#">CONTACT</a></li>
                 </ul>
@@ -37,7 +37,6 @@
                     <th scope="col">Activity Performed</th>
                     <th scope="col">Next Contact Date</th>  
                 </thead>
-                {% for row in rows %}
                 <tr>    
                     <td>{{ row["rowid"] }}</td>
                     <td>{{ row["Account_name"] }}</td>
@@ -47,17 +46,13 @@
                     <td>{{ row["Activity_Performed"] }}</td>
                     <td>{{ row["Next_Contact"] }}</td>
                     <td>
-                        <form action="{{url_for('edit')}}" method="POST">
-                            <input type="hidden" name="id" value="{{ row['rowid'] }}">
-                            <button class="btnl" type="submit">Edit</button>
+                        <form action="{{url_for('edit')}}" method="POST"><input type="hidden" name="id" value="{{ row['rowid'] }}"><input type="submit" value="Edit">
                         </form> 
-                        <!-- <form action="{{url_for('edit')}}" method="POST"><input type="hidden" name="id" value="{{ row['rowid'] }}"><input type="submit" value="Edit"></form>  -->
                     </td>
                     <td>
-                        <form onsubmit="return confirm('Are you sure you want to DELETE this entry from the Database?');" action="{{url_for('delete')}}" method="POST"><input type="hidden" name="id" value="{{ row['rowid'] }}"><input class="btnl"  type="submit" value="Delete"></form> 
+                        <form onsubmit="return confirm('Are you sure you want to DELETE this entry from the Database?');" action="{{url_for('delete')}}" method="POST"><input type="hidden" name="id" value="{{ row['rowid'] }}"><input type="submit" value="Delete"></form> 
                     </td>      
                 </tr>
-                {% endfor %}
                 
             </table>
 
