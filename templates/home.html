@@ -12,10 +12,18 @@
             </div>
             <div class="menu">
                 <ul>
-                    <li><a href="#">HOME</a></li>
+                    <li><a href="{{ url_for('home') }}">HOME</a></li>
                     <li><a href="#">ADD</a></li>
                     <li><a href="{{ url_for('list') }}">SHOW</a></li>
-                    <li><a href="#">DESIGN</a></li>
+                    <!-- <li><a href="#">DROPDOWN</a></li> -->
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">DROPDOWN</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('list') }}">Show Accounts</a>
+                            <a href="#">Page 2</a>
+                            <a href="#">Page 3</a>
+                        </div>
+                    </li>
                     <li><a href="#">CONTACT</a></li>
                 </ul>
             </div>
