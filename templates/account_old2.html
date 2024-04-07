@@ -32,25 +32,38 @@
             </div>
 
             <div class="search">
-                <input class="srch" type="search" name="" placeholder="Search Account">
+                <input class="srch" type="search" name="" placeholder="Type To text">
                 <a href="#"><button class="btn">Search</button></a>
             </div>
 
-        </div>
-        <div class="content">
+    <div>
+        <form action="{{ url_for('addrec') }}" method="POST">
+            <h2>Insert Account Details:</h3>
 
-            <div class="formaddnew">
-                <h2>Insert Account Details</h2>
-                <input type="text" name="nm" placeholder="Account Name">
-                <input type="text" name="csm" placeholder="Cust Success Mgr">
-                <input type="text" name="es" placeholder="Ent Services">
-                <input type="text" name="last" placeholder="Last Contacted">
-                <input type="text" name="activity" placeholder="Activity Performed">
-                <input type="text" name="next" placeholder="Next Contact">
-                <button class="btnn"><a href="#">Submit</a></button>
-                
-            </div>
-        </div>
+            <label for="name">Account_Name</label>
+            <input id="name" type="text" name="nm" /><br>
+
+            CSM
+            <!-- <textarea name="add"></textarea><br> -->
+            <input type="text" name="csm" /><br>
+
+            ES
+            <input type="text" name="es" /><br>
+
+            Last Contacted
+            <input type="text" name="last" /><br>
+
+            Activity Performed
+            <input type="text" name="activity" /><br>
+
+            Next Contact
+            <input type="text" name="next" /><br>
+
+            <input type="submit" value="Submit" /><br>
+        </form>
+
+
+
     </div>
 </body>
 </html>
