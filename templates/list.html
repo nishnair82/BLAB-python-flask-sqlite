@@ -12,23 +12,36 @@
             </div>
             <div class="menu">
                 <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">ADD</a></li>
-                    <li><a href="{{ url_for('list') }}">SHOW</a></li>
-                    <li><a href="#">DESIGN</a></li>
+                    <li><a href="{{ url_for('home') }}">HOME</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">ADD</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('enternew') }}">Add Account</a>
+                            <a href="#">Add Inventory Data</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">SHOW</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('list') }}">Account Info</a>
+                            <a href="#">Inventory Info</a>
+                        </div>
+                    </li>
                     <li><a href="#">CONTACT</a></li>
                 </ul>
             </div>
 
             <div class="search">
-                <input class="srch" type="search" name="" placeholder="Type To text">
+                <input class="srch" type="search" name="" placeholder="Search Account">
                 <a href="#"><button class="btn">Search</button></a>
             </div>
 
         </div>
-        <div class="content">
+        <!-- Overflow is for table responsiveness -->
+        <div style="overflow-x: auto;" class="content"> 
             <table>
-                <thead>
+                <caption>Account List, Action & Next Steps</caption>
+                <thead class="cell-highlight">
                     <th scope="col">ID</th>
                     <th scope="col">Account Name</th>
                     <th scope="col">CSM</th>

@@ -39,6 +39,50 @@
     float: left;
     height: 70px;
 }
+/* Testing Dropdown */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 14px;  
+  border: none;
+  /* outline: none; */
+  outline: invert
+  padding: 14px 6px;
+  background-color: inherit;
+  font-family: Arial;
+  margin: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /* Testing Dropdown */
 
 ul{
     float: left;
@@ -121,7 +165,7 @@ ul li a:hover {
     font-size: 12px;
     /* border-bottom-right-radius: 5px; */
     /* border-bottom-right-radius: 5px; */
-    border-radius: 5px;
+    /* border-radius: 5px; */
     transition: 0.2s ease;
     cursor: pointer;
 }
@@ -190,6 +234,57 @@ ul li a:hover {
     font-size: 65px
 }
 
+/* Form in Add Account Page */
+
+.formaddnew {
+    width: 280px;
+    height: 520px;
+    background: linear-gradient(to top, rgba(199, 197, 197, 0.195)50%,rgba(199, 197, 197, 0.196)50%);
+    /* position: absolute; */
+    position: relative;
+    left: 100px;
+    top: 20px;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.formaddnew h2 {
+    width: 220px;
+    font-family: sans-serif;
+    text-align: center;
+    color: #ff7200;
+    font-size: 22px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 2px;
+    padding: 2px;
+    margin-left: 10%;
+}
+.formaddnew input {
+    width: 280px;
+    height: 35px;
+    background: transparent;
+    border-bottom: 1px solid #ff7200;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+}
+
+.formaddnew input:focus {
+    outline: none;
+}
+
+::placeholder {
+    color: #fff;
+    font-family: Arial;
+}
+
+/*  Form in Add Account Page */
 
 .form {
     width: 250px;
@@ -295,3 +390,38 @@ ul li a:hover {
 .icon ion-icon:hover {
     color: #ff7200;
 }
+
+
+/* TABLE */
+
+table {
+    border-collapse: collapse;
+  }
+
+th, td {
+    border: 1px solid rgb(250, 240, 240);
+    padding: 8px;
+  }
+
+  .cell-highlight {
+    background-color: #ff7200;
+    font-weight: bold;
+  }
+
+  thead {
+	font-size: 0.875rem;
+	text-transform: uppercase;
+	letter-spacing: 2%;
+}
+
+caption {
+    font-weight: bold;
+    font-size: 30px;
+    text-align: left;
+    color: #ffffff;
+  }
+
+tr:hover {background-color: rgba(58, 17, 242, 0.668);}
+/* thead th { 
+    width: 10%;
+  } */
