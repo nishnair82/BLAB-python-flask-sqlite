@@ -41,14 +41,16 @@
 
             <div class="formaddnew">
                 <h2>Insert Account Details</h2>
-                <input type="text" name="nm" placeholder="Account Name">
-                <input type="text" name="csm" placeholder="Cust Success Mgr">
-                <input type="text" name="es" placeholder="Ent Services">
-                <input type="text" name="last" placeholder="Last Contacted">
-                <input type="text" name="activity" placeholder="Activity Performed">
-                <input type="text" name="next" placeholder="Next Contact">
-                <button class="btnn"><a href="#">Submit</a></button>
-                
+                <form action="{{ url_for('addrec') }}" method="POST">
+            
+                    <input type="text" name="nm" placeholder="Account Name">
+                    <input type="text" name="csm" placeholder="Cust Success Mgr">
+                    <input type="text" name="es" placeholder="Ent Services">
+                    <input type="text" name="last" placeholder="YYYY-MM-DD">
+                    <input type="text" name="activity" placeholder="Activity Performed">
+                    <input type="text" name="next" placeholder="YYYY-MM-DD">
+                    <button class="btnn"><a href="#">Submit</a></button>
+                </form>
             </div>
         </div>
     </div>
