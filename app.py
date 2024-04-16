@@ -1,5 +1,3 @@
-# Author: Clinton Daniel, University of South Florida
-# Date: 4/4/2023
 # Description: This is a Flask App that uses SQLite3 to
 # execute (C)reate, (R)ead, (U)pdate, (D)elete operations
 
@@ -77,11 +75,11 @@ def edit():
             # Use the hidden input value of id from the form to get the rowid
             id = request.form['id']
             # Connect to the database and SELECT a specific rowid
-            con = sqlite3.connect("database.db")
+            con = sqlite3.connect("accounts.db")
             con.row_factory = sqlite3.Row
 
             cur = con.cursor()
-            cur.execute("SELECT rowid, * FROM students WHERE rowid = " + id)
+            cur.execute("SELECT rowid, * FROM accounts WHERE rowid = " + id)
 
             rows = cur.fetchall()
         except:

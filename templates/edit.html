@@ -1,26 +1,56 @@
-{% extends "layout.html" %}
-{% block title %}
-Edit Student
-{% endblock %}
-{% block content %}
-        <h1>Edit Student Record</h1>
-        {% for row in rows %}
-        <form action="{{ url_for('editrec') }}" method="POST">
-            <h3 style="color:blue">Student ID: {{ row['rowid']}}</h3>
-            <input type="hidden" name="rowid" value="{{ row['rowid'] }}">
-            Name<br>
-            <input type="text" name="nm" value="{{ row['name'] }}"/><br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Planning App</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">PlanB</h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="{{ url_for('home') }}">HOME</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">ADD</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('enternew') }}">Add Account</a>
+                            <a href="#">Add Inventory Data</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">SHOW</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('list') }}">Account Info</a>
+                            <a href="#">Inventory Info</a>
+                        </div>
+                    </li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
 
-            Address<br>
-            <input type="text" name="add" value="{{row['addr']}}"/><br>
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Search Account">
+                <a href="#"><button class="btn">Search</button></a>
+            </div>
 
-            City<br>
-            <input type="text" name="city" value="{{ row['city'] }}"/><br>
-
-            Zip Code<br>
-            <input type="text" name="zip" value="{{ row['zip'] }}"/><br>
-
-            <input type="submit" value="Submit" /><br>
-        </form>
-        {% endfor %}
-{% endblock %}
+        </div>
+        <div class="content">
+            <div class="formaddnew">
+                <h2>Edit Account Details</h2>
+                <form action="{{ url_for('editrec') }}" method="POST">
+                    <input type="text" name="nm" placeholder="Account Name">
+                    <input type="text" name="csm" placeholder="Cust Success Mgr">
+                    <input type="text" name="es" placeholder="Ent Services">
+                    <input type="text" name="last" placeholder="YYYY-MM-DD">
+                    <input type="text" name="activity" placeholder="Activity Performed">
+                    <input type="text" name="next" placeholder="YYYY-MM-DD">
+                    <button class="btnn"><a href="#">Submit</a></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
