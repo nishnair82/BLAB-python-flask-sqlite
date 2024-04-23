@@ -6,7 +6,7 @@
 .main{
 
     width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(image3.jpg);
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(/static/images/image3.jpg);
     background-position: center;
     background-size: cover;
     height: 109vh;
@@ -107,7 +107,8 @@ ul li a{
 }   
 
 ul li a:hover { 
-    color: #ff7200;
+    /* color: #ff7200; */
+    color: rgb(128,62,249);
 }
 
 .search {
@@ -121,7 +122,8 @@ ul li a:hover {
     width: 200px;
     height: 40px;
     background: transparent;
-    border: 1px solid #ff7200;
+    /* border: 1px solid #ff7200; */
+    border: 1px solid rgb(128,62,249);
     margin-top: 13px;
     color: #fff;
     border-right: none;
@@ -135,8 +137,10 @@ ul li a:hover {
 .btn {
     width: 100px;
     height: 40px;
-    background: #ff7200;
-    border: 2px solid #ff7200;
+    /* background: #ff7200; */
+    background: rgb(128,62,249);
+    /* border: 2px solid #ff7200; */
+    border: 2px solid rgb(128,62,249);
     margin-top: 13px;
     color: #fff;
     font-size: 15px;
@@ -158,8 +162,10 @@ ul li a:hover {
 .btnl {
     width: 40px;
     height: 20px;
-    background: #ff7200;
-    border: 2px solid #ff7200;
+    /* background: #ff7200; */
+    background: rgb(128,62,249);
+    border: 2px solid rgb(128,62,249);
+    /* border: 2px solid #ff7200; */
     margin-top: 2px;
     color: #fff;
     font-size: 12px;
@@ -188,6 +194,13 @@ ul li a:hover {
     margin: auto;
     color: #fff;
     position: relative;
+    /* width: 350px;
+    height: 380px;
+    margin: auto;
+    left: 250px;
+    top: -20px
+    color: #fff;
+    position: absolute; */
 }
 
 .content .par{
@@ -204,12 +217,15 @@ ul li a:hover {
     font-family: 'Times New Roman';
     font-size: 50px;
     letter-spacing: 2px;
+    color: #fff;
 }
 
 .content .cn {
     width: 160px;
     height: 40px;
-    background: #ff7200;
+    /* background: #ff7200; */
+    /* background: rgb(128,62,249); */
+    background: rgb(81, 81, 81);
     border: none;
     margin-bottom: 10px;
     margin-left: 20px;
@@ -230,7 +246,8 @@ ul li a:hover {
 }
 
 .content span {
-    color: #ff7200;
+    /* color: #ff7200; */
+    color: rgb(128,62,249);
     font-size: 65px
 }
 
@@ -252,7 +269,8 @@ ul li a:hover {
     width: 220px;
     font-family: sans-serif;
     text-align: center;
-    color: #ff7200;
+    /* color: #ff7200; */
+    color: rgb(128,62,249);
     font-size: 22px;
     background-color: #fff;
     border-radius: 10px;
@@ -264,7 +282,8 @@ ul li a:hover {
     width: 280px;
     height: 35px;
     background: transparent;
-    border-bottom: 1px solid #ff7200;
+    /* border-bottom: 1px solid #ff7200; */
+    border-bottom: 1px solid rgb(128,62,249);
     border-top: none;
     border-right: none;
     border-left: none;
@@ -301,9 +320,9 @@ ul li a:hover {
     width: 220px;
     font-family: sans-serif;
     text-align: center;
-    color: #ff7200;
+    color: rgb(128,62,249);
     font-size: 22px;
-    background-color: #fff;
+    background-color: #090909;
     border-radius: 10px;
     margin: 2px;
     padding: 8px;
@@ -312,7 +331,8 @@ ul li a:hover {
     width: 240px;
     height: 35px;
     background: transparent;
-    border-bottom: 1px solid #ff7200;
+    /* border-bottom: 1px solid #ff7200; */
+    border-bottom: 1px solid rgb(128,62,249);
     border-top: none;
     border-right: none;
     border-left: none;
@@ -335,7 +355,8 @@ ul li a:hover {
 .btnn {
     width: 240px;
     height: 40px;
-    background: #ff7200;
+    /* background: #ff7200; */
+    background: rgb(128,62,249);
     border: none;
     margin-top: 30px;
     font-size: 18px;
@@ -347,7 +368,8 @@ ul li a:hover {
 
 .btnn:hover:hover {
     background: #fff;
-    color: #ff7200;
+    /* color: #ff7200; */
+    color: rgb(128,62,249);
 }
 
 .btnn a{
@@ -356,6 +378,36 @@ ul li a:hover {
     font-weight: bold;
 }
 
+/* Start - For the Button in the Result URL*/
+.btnnlist {
+    width: 150px;
+    height: 40px;
+    /* background: #ff7200; */
+    background: rgb(128,62,249);
+    border: none;
+    margin-top: 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.4s ease;
+}
+
+.btnnlist:hover:hover {
+    background: #fff;
+    /* color: #ff7200; */
+    color: rgb(128,62,249);
+}
+
+.btnnlist a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+
+
+/* End - For the Button in the Result URL*/
 .form .link {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 17px;
@@ -365,7 +417,8 @@ ul li a:hover {
 
 .form .link a {
     text-decoration: none;
-    color: #ff7200;
+    /* color: #ff7200; */
+    color: rgb(128,62,249);
 }
 
 .liw {
@@ -388,7 +441,8 @@ ul li a:hover {
 }
 
 .icon ion-icon:hover {
-    color: #ff7200;
+    /* color: #ff7200; */
+    color: rgb(128,62,249);
 }
 
 
@@ -404,7 +458,8 @@ th, td {
   }
 
   .cell-highlight {
-    background-color: #ff7200;
+    /* background-color: #ff7200; */
+    background-color: rgb(95,21,250);
     font-weight: bold;
   }
 
@@ -421,7 +476,7 @@ caption {
     color: #ffffff;
   }
 
-tr:hover {background-color: rgba(58, 17, 242, 0.668);}
+tr:hover {background-color: rgba(251, 92, 72, 0.668);}
 /* thead th { 
     width: 10%;
   } */

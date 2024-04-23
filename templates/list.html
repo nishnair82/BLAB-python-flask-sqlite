@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>Planning App</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
     <div class="main">
@@ -24,6 +24,9 @@
                         <a href="#" class="dropbtn">SHOW</a>
                         <div class="dropdown-content">
                             <a href="{{ url_for('list') }}">Account Info</a>
+                            <a href="{{ url_for('listsr') }}">Service Review Status</a>
+                            <a href="{{ url_for('listcheckin') }}">General Check-In Status</a>
+                            <a href="#">My To-Do List</a>
                             <a href="#">Inventory Info</a>
                         </div>
                     </li>

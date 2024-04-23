@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>Planning App</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
     <div class="main">
@@ -38,8 +38,10 @@
 
         </div>
         <div class="content">
-            <strong>Result of the database transaction:</strong> {{ msg }}
-            <button class="cn"><a href="{{ url_for('list') }}">List Accounts</a></button>
+            <!-- <strong classs="result">Result of the database transaction:</strong> <span>{{ msg }}</span> -->
+            <h1><span>Success:</span><br>{{ msg }}<br></h1>
+            <br><br>
+            <button class="btnnlist"><a href="{{ url_for('list') }}">List Accounts</a></button>
         </div>
     </div>
     <!-- <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script> -->
