@@ -5,13 +5,49 @@ from flask import Flask
 from flask import render_template
 from flask import request
 import sqlite3
+import json
 
 app = Flask(__name__)
 
 # Home Page route
 @app.route("/")
 def home():
-    return render_template("home.html")
+
+    # # products = ['Product A', 'Product B']
+    # # sales = [100, 200]
+    # products = ['Product A']
+    # sales = [100]
+
+    # # Convert data to JSON format
+    # chart_data = json.dumps({
+    #     'labels': products,
+    #     'datasets': [{
+    #         'label': 'Sales',
+    #         'data': sales,
+    #         'backgroundColor': ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)'],
+    #         'borderColor': ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)'],
+    #         'borderWidth': 1
+    #     }]
+    # })
+    return render_template('home_.html')
+    # return render_template('home_.html', chart_data=chart_data)
+
+    #     # Sample data: Product names and their respective sales
+    # products = ['Product A', 'Product B', 'Product C']
+    # sales = [100, 200, 150]
+
+    # # Convert data to JSON format
+    # chart_data = json.dumps({
+    #     'labels': products,
+    #     'datasets': [{
+    #         'label': 'Sales',
+    #         'data': sales,
+    #         'backgroundColor': ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)'],
+    #         'borderColor': ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)'],
+    #         'borderWidth': 1
+    #     }]
+    # })
+    # return render_template("home.html")
 
 # Route to form used to add a new student to the database
 @app.route("/enternew")
@@ -33,15 +69,15 @@ def addrec():
             es = request.form['es']
             last = request.form['last']
             act = request.form['activity']
-            next = request.form['next']
+            nextc = request.form['nextc']
 
             # Connect to SQLite3 database and execute the INSERT
             with sqlite3.connect('accounts.db') as con:
                 cur = con.cursor()
-                cur.execute("INSERT INTO accounts (Account_name, CSM, ES, Last_Contacted, Activity_Performed, Next_Contact) VALUES (?,?,?,?,?,?)",(nm, csm, es, last, act, next))
+                cur.execute("INSERT INTO accounts (Account_name, CSM, ES, Last_Contacted, Activity_Performed, Next_Contact) VALUES (?,?,?,?,?,?)",(nm, csm, es, last, act, nextc))
 
                 con.commit()
-                msg = "Record successfully added to database"
+                msg = "Record successfully added"
         except:
             con.rollback()
             msg = "Error in the INSERT"
@@ -54,6 +90,36 @@ def addrec():
 # Route to SELECT all data from the database and display in a table      
 @app.route('/list')
 def list():
+    # Connect to the SQLite3 datatabase and 
+    # SELECT rowid and all Rows from the students table.
+    con = sqlite3.connect("accounts.db")
+    con.row_factory = sqlite3.Row
+
+    cur = con.cursor()
+    cur.execute("SELECT rowid, * FROM accounts")
+
+    rows = cur.fetchall()
+    con.close()
+    # Send the results of the SELECT to the list.html page
+    return render_template("list.html",rows=rows)
+
+@app.route('/listsr')
+def listsr():
+    # Connect to the SQLite3 datatabase and 
+    # SELECT rowid and all Rows from the students table.
+    con = sqlite3.connect("accounts.db")
+    con.row_factory = sqlite3.Row
+
+    cur = con.cursor()
+    cur.execute("SELECT rowid, * FROM accounts")
+
+    rows = cur.fetchall()
+    con.close()
+    # Send the results of the SELECT to the list.html page
+    return render_template("list.html",rows=rows)
+
+@app.route('/listcheckin')
+def listcheckin():
     # Connect to the SQLite3 datatabase and 
     # SELECT rowid and all Rows from the students table.
     con = sqlite3.connect("accounts.db")
