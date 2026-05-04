@@ -1,0 +1,102 @@
+{
+  "events": [
+    {
+      "http_server_request": {
+        "request_method": "GET",
+        "protocol": "HTTP/1.1",
+        "path_info": "/static/images/image5.jpeg",
+        "normalized_path_info": "/static/{filename}",
+        "headers": {
+          "Host": "localhost:3000",
+          "Connection": "keep-alive",
+          "Sec-Ch-Ua": "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+          "Dnt": "1",
+          "Sec-Ch-Ua-Mobile": "?0",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+          "Sec-Ch-Ua-Platform": "\"macOS\"",
+          "Accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+          "Sec-Fetch-Site": "same-origin",
+          "Sec-Fetch-Mode": "no-cors",
+          "Sec-Fetch-Dest": "image",
+          "Referer": "http://localhost:3000/static/css/style.css",
+          "Accept-Encoding": "gzip, deflate, br, zstd",
+          "Accept-Language": "en-GB,en-US;q=0.9,en;q=0.8",
+          "If-None-Match": "\"1713871198.2749062-556750-3726583394\"",
+          "If-Modified-Since": "Tue, 23 Apr 2024 11:19:58 GMT"
+        }
+      },
+      "message": [
+        {
+          "object_id": 4360330176,
+          "value": "'images/image5.jpeg'",
+          "name": "filename",
+          "class": "builtins.str"
+        }
+      ],
+      "id": 1,
+      "event": "call",
+      "thread_id": 3
+    },
+    {
+      "http_server_response": {
+        "status_code": 304,
+        "mime_type": "image/jpeg",
+        "headers": {
+          "Content-Disposition": "inline; filename=image5.jpeg",
+          "Content-Type": "image/jpeg",
+          "Content-Length": "556750",
+          "Last-Modified": "Tue, 23 Apr 2024 11:19:58 GMT",
+          "Cache-Control": "no-cache",
+          "ETag": "\"1713871198.2749062-556750-3726583394\"",
+          "Date": "Sun, 12 May 2024 10:45:04 GMT"
+        }
+      },
+      "parent_id": 1,
+      "elapsed": 0.0006699999999999484,
+      "id": 2,
+      "event": "return",
+      "thread_id": 3
+    }
+  ],
+  "version": "1.9",
+  "metadata": {
+    "language": {
+      "name": "python",
+      "engine": "CPython",
+      "version": "3.9.6"
+    },
+    "client": {
+      "name": "appmap",
+      "url": "https://github.com/applandinc/appmap-python"
+    },
+    "git": {
+      "repository": "https://github.com/nishnair82/BLAB-python-flask-sqlite.git",
+      "branch": "Dev",
+      "commit": "4634c2183fc8316cdc9fe85203bd12004199d638"
+    },
+    "frameworks": [
+      {
+        "name": "flask",
+        "version": "3.0.2"
+      }
+    ],
+    "name": "GET /static/images/image5.jpeg (304) - 16:15:04.730",
+    "timestamp": 1715510704.730351,
+    "recorder": {
+      "name": "record_requests",
+      "type": "requests"
+    }
+  },
+  "classMap": [
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "GET /static/{filename}"
+        }
+      ]
+    }
+  ]
+}

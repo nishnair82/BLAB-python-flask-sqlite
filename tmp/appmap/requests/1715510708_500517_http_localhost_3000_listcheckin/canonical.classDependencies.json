@@ -1,0 +1,6 @@
+[
+  {
+    "caller": "GET /listcheckin",
+    "callee": "<templates>/TemplatesListHtml#render"
+  }
+]

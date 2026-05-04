@@ -1,0 +1,121 @@
+{
+  "events": [
+    {
+      "http_server_request": {
+        "request_method": "GET",
+        "protocol": "HTTP/1.1",
+        "path_info": "/",
+        "normalized_path_info": "/",
+        "headers": {
+          "Host": "localhost:3000",
+          "Connection": "keep-alive",
+          "Sec-Ch-Ua": "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+          "Sec-Ch-Ua-Mobile": "?0",
+          "Sec-Ch-Ua-Platform": "\"macOS\"",
+          "Upgrade-Insecure-Requests": "1",
+          "Dnt": "1",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+          "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+          "Sec-Fetch-Site": "same-origin",
+          "Sec-Fetch-Mode": "navigate",
+          "Sec-Fetch-User": "?1",
+          "Sec-Fetch-Dest": "document",
+          "Referer": "http://localhost:3000/",
+          "Accept-Encoding": "gzip, deflate, br, zstd",
+          "Accept-Language": "en-GB,en-US;q=0.9,en;q=0.8"
+        }
+      },
+      "id": 1,
+      "event": "call",
+      "thread_id": 15
+    },
+    {
+      "receiver": {
+        "object_id": 4364453920,
+        "value": "<Template 'home_.html'>",
+        "class": "jinja2.environment.Template"
+      },
+      "path": "templates/home_.html",
+      "id": 2,
+      "event": "call",
+      "thread_id": 15,
+      "defined_class": "<templates>.TemplatesHome_Html",
+      "method_id": "render",
+      "static": false
+    },
+    {
+      "parent_id": 2,
+      "elapsed": 0.0003397499999984177,
+      "id": 3,
+      "event": "return",
+      "thread_id": 15
+    },
+    {
+      "http_server_response": {
+        "status_code": 200,
+        "mime_type": "text/html; charset=utf-8",
+        "headers": {
+          "Content-Type": "text/html; charset=utf-8",
+          "Content-Length": "2917"
+        }
+      },
+      "parent_id": 1,
+      "elapsed": 0.0007900829999982761,
+      "id": 4,
+      "event": "return",
+      "thread_id": 15
+    }
+  ],
+  "version": "1.9",
+  "metadata": {
+    "language": {
+      "name": "python",
+      "engine": "CPython",
+      "version": "3.9.6"
+    },
+    "client": {
+      "name": "appmap",
+      "url": "https://github.com/applandinc/appmap-python"
+    },
+    "git": {
+      "repository": "https://github.com/nishnair82/BLAB-python-flask-sqlite.git",
+      "branch": "Dev",
+      "commit": "4634c2183fc8316cdc9fe85203bd12004199d638"
+    },
+    "frameworks": [
+      {
+        "name": "flask",
+        "version": "3.0.2"
+      }
+    ],
+    "name": "GET / (200) - 16:15:19.544",
+    "timestamp": 1715510719.544051,
+    "recorder": {
+      "name": "record_requests",
+      "type": "requests"
+    }
+  },
+  "classMap": [
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "GET /"
+        }
+      ]
+    },
+    {
+      "type": "class",
+      "name": "<templates>/TemplatesHome_Html",
+      "children": [
+        {
+          "type": "function",
+          "name": "render",
+          "static": false
+        }
+      ]
+    }
+  ]
+}

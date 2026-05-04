@@ -1,0 +1,7 @@
+[
+  {
+    "route": "GET /list",
+    "parameters": "()",
+    "status": 200
+  }
+]

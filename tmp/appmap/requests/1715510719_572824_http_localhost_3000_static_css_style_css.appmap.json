@@ -1,0 +1,102 @@
+{
+  "events": [
+    {
+      "http_server_request": {
+        "request_method": "GET",
+        "protocol": "HTTP/1.1",
+        "path_info": "/static/css/style.css",
+        "normalized_path_info": "/static/{filename}",
+        "headers": {
+          "Host": "localhost:3000",
+          "Connection": "keep-alive",
+          "Sec-Ch-Ua": "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+          "Dnt": "1",
+          "If-None-Match": "\"1713871385.203611-8403-584197329\"",
+          "If-Modified-Since": "Tue, 23 Apr 2024 11:23:05 GMT",
+          "Sec-Ch-Ua-Mobile": "?0",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+          "Sec-Ch-Ua-Platform": "\"macOS\"",
+          "Accept": "text/css,*/*;q=0.1",
+          "Sec-Fetch-Site": "same-origin",
+          "Sec-Fetch-Mode": "no-cors",
+          "Sec-Fetch-Dest": "style",
+          "Referer": "http://localhost:3000/",
+          "Accept-Encoding": "gzip, deflate, br, zstd",
+          "Accept-Language": "en-GB,en-US;q=0.9,en;q=0.8"
+        }
+      },
+      "message": [
+        {
+          "object_id": 4364848688,
+          "value": "'css/style.css'",
+          "name": "filename",
+          "class": "builtins.str"
+        }
+      ],
+      "id": 1,
+      "event": "call",
+      "thread_id": 16
+    },
+    {
+      "http_server_response": {
+        "status_code": 304,
+        "mime_type": "text/css; charset=utf-8",
+        "headers": {
+          "Content-Disposition": "inline; filename=style.css",
+          "Content-Type": "text/css; charset=utf-8",
+          "Content-Length": "8403",
+          "Last-Modified": "Tue, 23 Apr 2024 11:23:05 GMT",
+          "Cache-Control": "no-cache",
+          "ETag": "\"1713871385.203611-8403-584197329\"",
+          "Date": "Sun, 12 May 2024 10:45:19 GMT"
+        }
+      },
+      "parent_id": 1,
+      "elapsed": 0.0009622499999970557,
+      "id": 2,
+      "event": "return",
+      "thread_id": 16
+    }
+  ],
+  "version": "1.9",
+  "metadata": {
+    "language": {
+      "name": "python",
+      "engine": "CPython",
+      "version": "3.9.6"
+    },
+    "client": {
+      "name": "appmap",
+      "url": "https://github.com/applandinc/appmap-python"
+    },
+    "git": {
+      "repository": "https://github.com/nishnair82/BLAB-python-flask-sqlite.git",
+      "branch": "Dev",
+      "commit": "4634c2183fc8316cdc9fe85203bd12004199d638"
+    },
+    "frameworks": [
+      {
+        "name": "flask",
+        "version": "3.0.2"
+      }
+    ],
+    "name": "GET /static/css/style.css (304) - 16:15:19.572",
+    "timestamp": 1715510719.572824,
+    "recorder": {
+      "name": "record_requests",
+      "type": "requests"
+    }
+  },
+  "classMap": [
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "GET /static/{filename}"
+        }
+      ]
+    }
+  ]
+}

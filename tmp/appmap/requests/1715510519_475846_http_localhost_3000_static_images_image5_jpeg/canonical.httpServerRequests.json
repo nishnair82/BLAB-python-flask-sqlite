@@ -1,0 +1,7 @@
+[
+  {
+    "route": "GET /static/{filename}",
+    "parameters": "(filename)",
+    "status": 200
+  }
+]

@@ -1,0 +1,86 @@
+{
+  "events": [
+    {
+      "http_server_request": {
+        "request_method": "GET",
+        "protocol": "HTTP/1.1",
+        "path_info": "/favicon.ico",
+        "headers": {
+          "Host": "localhost:3000",
+          "Connection": "keep-alive",
+          "Sec-Ch-Ua": "\"Not-A.Brand\";v=\"99\", \"Chromium\";v=\"124\"",
+          "Dnt": "1",
+          "Sec-Ch-Ua-Mobile": "?0",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+          "Sec-Ch-Ua-Platform": "\"macOS\"",
+          "Accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+          "Sec-Fetch-Site": "same-origin",
+          "Sec-Fetch-Mode": "no-cors",
+          "Sec-Fetch-Dest": "image",
+          "Referer": "http://localhost:3000/",
+          "Accept-Encoding": "gzip, deflate, br, zstd",
+          "Accept-Language": "en-GB,en-US;q=0.9,en;q=0.8"
+        }
+      },
+      "id": 1,
+      "event": "call",
+      "thread_id": 4
+    },
+    {
+      "http_server_response": {
+        "status_code": 404,
+        "mime_type": "text/html; charset=utf-8",
+        "headers": {
+          "Content-Type": "text/html; charset=utf-8",
+          "Content-Length": "207"
+        }
+      },
+      "parent_id": 1,
+      "elapsed": 0.0001905000000022028,
+      "id": 2,
+      "event": "return",
+      "thread_id": 4
+    }
+  ],
+  "version": "1.9",
+  "metadata": {
+    "language": {
+      "name": "python",
+      "engine": "CPython",
+      "version": "3.9.6"
+    },
+    "client": {
+      "name": "appmap",
+      "url": "https://github.com/applandinc/appmap-python"
+    },
+    "git": {
+      "repository": "https://github.com/nishnair82/BLAB-python-flask-sqlite.git",
+      "branch": "Dev",
+      "commit": "4634c2183fc8316cdc9fe85203bd12004199d638"
+    },
+    "frameworks": [
+      {
+        "name": "flask",
+        "version": "3.0.2"
+      }
+    ],
+    "name": "GET /favicon.ico (404) - 16:12:00.443",
+    "timestamp": 1715510520.443861,
+    "recorder": {
+      "name": "record_requests",
+      "type": "requests"
+    }
+  },
+  "classMap": [
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "GET /favicon.ico"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "language": {
+    "name": "python",
+    "engine": "CPython",
+    "version": "3.9.6"
+  },
+  "client": {
+    "name": "appmap",
+    "url": "https://github.com/applandinc/appmap-python"
+  },
+  "git": {
+    "repository": "https://github.com/nishnair82/BLAB-python-flask-sqlite.git",
+    "branch": "Dev",
+    "commit": "4634c2183fc8316cdc9fe85203bd12004199d638"
+  },
+  "frameworks": [
+    {
+      "name": "flask",
+      "version": "3.0.2"
+    }
+  ],
+  "name": "GET /static/css/style.css (304) - 16:12:04.319",
+  "timestamp": 1715510524.31927,
+  "recorder": {
+    "name": "record_requests",
+    "type": "requests"
+  }
+}

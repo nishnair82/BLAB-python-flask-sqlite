@@ -1,0 +1,23 @@
+[
+  {
+    "type": "http",
+    "name": "HTTP server requests",
+    "children": [
+      {
+        "type": "route",
+        "name": "GET /listcheckin"
+      }
+    ]
+  },
+  {
+    "type": "class",
+    "name": "<templates>/TemplatesListHtml",
+    "children": [
+      {
+        "type": "function",
+        "name": "render",
+        "static": false
+      }
+    ]
+  }
+]
